@@ -1,0 +1,14 @@
+non terminal Obj blank, semi;
+    terminal Obj terminal, start;
+
+start with semi;
+
+semi
+	::= start terminal
+	|   terminal
+	;
+
+blank
+	::= terminal blank
+	|   terminal 
+	|   start;

@@ -1,0 +1,225 @@
+===== Viable Prefix Recognizer =====
+START lalr_state [0]: {
+  [Mods ::= (*) Mod , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PRIVATE , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) FLOAT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Dcl ::= (*) Mods name semi , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+  [Mod ::= (*) Abstractness , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) VOID , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Abstractness ::= (*) NONABSTRACT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [$START ::= (*) Dcls EOF , {EOF }]
+  [Mod ::= (*) Access , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PROTECTED , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) OBJECT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Mods ::= (*) Mods Mod , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PUBLIC , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) INT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Dcls ::= (*) Dcl , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+  [Mod ::= (*) Type , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PACKAGE , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Abstractness ::= (*) ABSTRACT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Dcls ::= (*) Dcls Dcl , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+}
+transition on FLOAT to state [17]
+transition on NONABSTRACT to state [16]
+transition on Abstractness to state [15]
+transition on Mod to state [14]
+transition on PRIVATE to state [13]
+transition on Dcl to state [12]
+transition on PROTECTED to state [11]
+transition on VOID to state [10]
+transition on Access to state [9]
+transition on OBJECT to state [8]
+transition on Mods to state [7]
+transition on Dcls to state [6]
+transition on PUBLIC to state [5]
+transition on PACKAGE to state [4]
+transition on ABSTRACT to state [3]
+transition on INT to state [2]
+transition on Type to state [1]
+
+-------------------
+lalr_state [1]: {
+  [Mod ::= Type (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [2]: {
+  [Type ::= INT (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [3]: {
+  [Abstractness ::= ABSTRACT (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [4]: {
+  [Access ::= PACKAGE (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [5]: {
+  [Access ::= PUBLIC (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [6]: {
+  [Mods ::= (*) Mod , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PRIVATE , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) FLOAT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Dcl ::= (*) Mods name semi , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+  [Mod ::= (*) Abstractness , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) VOID , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Abstractness ::= (*) NONABSTRACT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [$START ::= Dcls (*) EOF , {EOF }]
+  [Mod ::= (*) Access , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PROTECTED , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) OBJECT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Mods ::= (*) Mods Mod , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PUBLIC , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) INT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Mod ::= (*) Type , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PACKAGE , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Abstractness ::= (*) ABSTRACT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Dcls ::= Dcls (*) Dcl , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+}
+transition on FLOAT to state [17]
+transition on NONABSTRACT to state [16]
+transition on Abstractness to state [15]
+transition on Mod to state [14]
+transition on PRIVATE to state [13]
+transition on Dcl to state [22]
+transition on EOF to state [21]
+transition on PROTECTED to state [11]
+transition on VOID to state [10]
+transition on Access to state [9]
+transition on OBJECT to state [8]
+transition on Mods to state [7]
+transition on PUBLIC to state [5]
+transition on PACKAGE to state [4]
+transition on ABSTRACT to state [3]
+transition on INT to state [2]
+transition on Type to state [1]
+
+-------------------
+lalr_state [7]: {
+  [Abstractness ::= (*) ABSTRACT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) INT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PROTECTED , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Mod ::= (*) Abstractness , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) OBJECT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) VOID , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PRIVATE , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Mods ::= Mods (*) Mod , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Mod ::= (*) Type , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Abstractness ::= (*) NONABSTRACT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Type ::= (*) FLOAT , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PACKAGE , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Access ::= (*) PUBLIC , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+  [Dcl ::= Mods (*) name semi , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+  [Mod ::= (*) Access , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+transition on FLOAT to state [17]
+transition on Abstractness to state [15]
+transition on NONABSTRACT to state [16]
+transition on Mod to state [19]
+transition on PRIVATE to state [13]
+transition on PROTECTED to state [11]
+transition on VOID to state [10]
+transition on OBJECT to state [8]
+transition on Access to state [9]
+transition on PACKAGE to state [4]
+transition on PUBLIC to state [5]
+transition on ABSTRACT to state [3]
+transition on INT to state [2]
+transition on name to state [18]
+transition on Type to state [1]
+
+-------------------
+lalr_state [8]: {
+  [Type ::= OBJECT (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [9]: {
+  [Mod ::= Access (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [10]: {
+  [Type ::= VOID (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [11]: {
+  [Access ::= PROTECTED (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [12]: {
+  [Dcls ::= Dcl (*) , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+}
+
+-------------------
+lalr_state [13]: {
+  [Access ::= PRIVATE (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [14]: {
+  [Mods ::= Mod (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [15]: {
+  [Mod ::= Abstractness (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [16]: {
+  [Abstractness ::= NONABSTRACT (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [17]: {
+  [Type ::= FLOAT (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [18]: {
+  [Dcl ::= Mods name (*) semi , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+}
+transition on semi to state [20]
+
+-------------------
+lalr_state [19]: {
+  [Mods ::= Mods Mod (*) , {PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT name }]
+}
+
+-------------------
+lalr_state [20]: {
+  [Dcl ::= Mods name semi (*) , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+}
+
+-------------------
+lalr_state [21]: {
+  [$START ::= Dcls EOF (*) , {EOF }]
+}
+
+-------------------
+lalr_state [22]: {
+  [Dcls ::= Dcls Dcl (*) , {EOF PRIVATE PUBLIC PROTECTED PACKAGE VOID INT FLOAT OBJECT ABSTRACT NONABSTRACT }]
+}
+
+-------------------
+------- CUP v0.11a beta 20060608 Parser Generation Summary -------
+  0 errors and 0 warnings
+  34 terminals, 7 non-terminals, and 19 productions declared, 
+  producing 23 unique parse states.
+  20 terminals declared but not used.
+  0 non-terminals declared but not used.
+  0 productions never reduced.
+  0 conflicts detected (0 expected).
+  Code written to "Parsercup3.java", and "sym.java".
+---------------------------------------------------- (v0.11a beta 20060608)

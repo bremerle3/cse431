@@ -1,0 +1,6 @@
+Start semi
+Edge semi blank start
+Edge semi $FINAL$ terminal
+Edge blank blank terminal
+Edge blank $FINAL$ terminal
+Edge blank $FINAL$ start

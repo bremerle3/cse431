@@ -1,0 +1,65 @@
+// Generated symbol to string mapping
+  package autogen;
+  public class symString {
+     public static String symToString[] = new String[58];
+     static {
+        symToString[57] = "UNARY_DEC";
+        symToString[56] = "UNARY_INC";
+        symToString[55] = "INTNUMBER";
+        symToString[54] = "LITERAL";
+        symToString[53] = "IDENTIFIER";
+        symToString[52] = "BANG";
+        symToString[51] = "QUESTION";
+        symToString[50] = "PERCENT";
+        symToString[49] = "RSLASH";
+        symToString[48] = "MINUSOP";
+        symToString[47] = "PLUSOP";
+        symToString[46] = "ASTERICK";
+        symToString[45] = "AND";
+        symToString[44] = "PIPE";
+        symToString[43] = "COMMA";
+        symToString[42] = "SEMICOLON";
+        symToString[41] = "COLON";
+        symToString[40] = "PERIOD";
+        symToString[39] = "EQUALS";
+        symToString[38] = "RBRACE";
+        symToString[37] = "LBRACE";
+        symToString[36] = "RPAREN";
+        symToString[35] = "LPAREN";
+        symToString[34] = "ASS_ADD";
+        symToString[33] = "WHILE";
+        symToString[32] = "VOID";
+        symToString[31] = "THIS";
+        symToString[30] = "SUPER";
+        symToString[29] = "STATIC";
+        symToString[28] = "RETURN";
+        symToString[27] = "PUBLIC";
+        symToString[26] = "PRIVATE";
+        symToString[25] = "NULL";
+        symToString[24] = "NEW";
+        symToString[23] = "DOUBLE";
+        symToString[22] = "FLOAT";
+        symToString[21] = "LONG";
+        symToString[20] = "SHORT";
+        symToString[19] = "CHAR";
+        symToString[18] = "BYTE";
+        symToString[17] = "INT";
+        symToString[16] = "IF";
+        symToString[15] = "ELSE";
+        symToString[14] = "CLASS";
+        symToString[13] = "BOOLEAN";
+        symToString[12] = "TILDE";
+        symToString[11] = "HAT";
+        symToString[10] = "INSTANCEOF";
+        symToString[9] = "OP_LOR";
+        symToString[8] = "OP_LAND";
+        symToString[7] = "OP_LT";
+        symToString[6] = "OP_GT";
+        symToString[5] = "OP_NE";
+        symToString[4] = "OP_EQ";
+        symToString[3] = "OP_LE";
+        symToString[2] = "OP_GE";
+        symToString[1] = "error";
+        symToString[0] = "EOF";
+     }
+  }

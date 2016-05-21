@@ -1,0 +1,94 @@
+Warning : *** Shift/Reduce conflict found in state #6
+  between S ::= IF lparen rparen S (*) 
+  and     S ::= IF lparen rparen S (*) ELSE S 
+  under symbol ELSE
+  Resolved in favor of shifting.
+
+Error : *** More conflicts encountered than expected -- parser generation aborted
+===== Viable Prefix Recognizer =====
+START lalr_state [0]: {
+  [S ::= (*) IF lparen rparen S , {EOF }]
+  [$START ::= (*) S EOF , {EOF }]
+  [S ::= (*) x , {EOF }]
+  [S ::= (*) IF lparen rparen S ELSE S , {EOF }]
+}
+transition on IF to state [3]
+transition on S to state [2]
+transition on x to state [1]
+
+-------------------
+lalr_state [1]: {
+  [S ::= x (*) , {EOF ELSE }]
+}
+
+-------------------
+lalr_state [2]: {
+  [$START ::= S (*) EOF , {EOF }]
+}
+transition on EOF to state [9]
+
+-------------------
+lalr_state [3]: {
+  [S ::= IF (*) lparen rparen S , {EOF ELSE }]
+  [S ::= IF (*) lparen rparen S ELSE S , {EOF ELSE }]
+}
+transition on lparen to state [4]
+
+-------------------
+lalr_state [4]: {
+  [S ::= IF lparen (*) rparen S , {EOF ELSE }]
+  [S ::= IF lparen (*) rparen S ELSE S , {EOF ELSE }]
+}
+transition on rparen to state [5]
+
+-------------------
+lalr_state [5]: {
+  [S ::= (*) IF lparen rparen S , {EOF ELSE }]
+  [S ::= IF lparen rparen (*) S ELSE S , {EOF ELSE }]
+  [S ::= (*) x , {EOF ELSE }]
+  [S ::= (*) IF lparen rparen S ELSE S , {EOF ELSE }]
+  [S ::= IF lparen rparen (*) S , {EOF ELSE }]
+}
+transition on IF to state [3]
+transition on S to state [6]
+transition on x to state [1]
+
+-------------------
+lalr_state [6]: {
+  [S ::= IF lparen rparen S (*) ELSE S , {EOF ELSE }]
+  [S ::= IF lparen rparen S (*) , {EOF ELSE }]
+}
+transition on ELSE to state [7]
+
+-------------------
+lalr_state [7]: {
+  [S ::= (*) IF lparen rparen S , {EOF ELSE }]
+  [S ::= IF lparen rparen S ELSE (*) S , {EOF ELSE }]
+  [S ::= (*) x , {EOF ELSE }]
+  [S ::= (*) IF lparen rparen S ELSE S , {EOF ELSE }]
+}
+transition on IF to state [3]
+transition on S to state [8]
+transition on x to state [1]
+
+-------------------
+lalr_state [8]: {
+  [S ::= IF lparen rparen S ELSE S (*) , {EOF ELSE }]
+}
+
+-------------------
+lalr_state [9]: {
+  [$START ::= S EOF (*) , {EOF }]
+}
+
+-------------------
+------- CUP v0.11a beta 20060608 Parser Generation Summary -------
+  1 error and 1 warning
+  34 terminals, 1 non-terminal, and 4 productions declared, 
+  producing 10 unique parse states.
+  27 terminals declared but not used.
+  0 non-terminals declared but not used.
+  0 productions never reduced.
+  1 conflict detected (0 expected).
+  No code produced.
+---------------------------------------------------- (v0.11a beta 20060608)

@@ -1,0 +1,35 @@
+===== Viable Prefix Recognizer =====
+START lalr_state [0]: {
+  [$START ::= (*) S EOF , {EOF }]
+  [S ::= (*) a , {EOF }]
+}
+transition on S to state [2]
+transition on a to state [1]
+
+-------------------
+lalr_state [1]: {
+  [S ::= a (*) , {EOF }]
+}
+
+-------------------
+lalr_state [2]: {
+  [$START ::= S (*) EOF , {EOF }]
+}
+transition on EOF to state [3]
+
+-------------------
+lalr_state [3]: {
+  [$START ::= S EOF (*) , {EOF }]
+}
+
+-------------------
+------- CUP v0.11a beta 20060608 Parser Generation Summary -------
+  0 errors and 0 warnings
+  34 terminals, 1 non-terminal, and 2 productions declared, 
+  producing 4 unique parse states.
+  31 terminals declared but not used.
+  0 non-terminals declared but not used.
+  0 productions never reduced.
+  0 conflicts detected (0 expected).
+  Code written to "Parsercup0.java", and "sym.java".
+---------------------------------------------------- (v0.11a beta 20060608)

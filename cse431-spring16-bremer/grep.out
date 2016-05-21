@@ -1,0 +1,20 @@
+Binary file ./.git/index matches
+Binary file ./Labs/3/Tools/parser.jar matches
+Binary file ./Labs/3/bin/mains/ReferenceParser.class matches
+./Labs/3/build.xml:	<property name="solutions.jar" value="Tools/coursesolutions.jar"/>
+./Labs/3/src/mains/ReferenceParser.java:import coursesolutions.courseparser.*;
+./Labs/4/.classpath:	<classpathentry kind="lib" path="Tools/coursesolutions.jar"/>
+Binary file ./Labs/4/Tools/coursesolutions.jar matches
+Binary file ./Labs/4/Tools/parser.jar matches
+Binary file ./Labs/4/bin/submit/SymtabVisitor.class matches
+./Labs/4/build.xml:	<property name="solutions.jar" value="Tools/coursesolutions.jar"/>
+./Labs/4/build.xml:				<pathelement location="Tools/coursesolutions.jar" />
+./Labs/4/build.xml:				<pathelement location="Tools/coursesolutions.jar" />
+./Labs/4/src/mains/Main.java:import coursesolutions.courseparser.*;
+./Labs/4/src/submit/SymtabVisitor.java:import coursesolutions.*;
+./Labs/4/src/submit/SymtabVisitor.java:import coursesolutions.courseparser.CourseParser;
+./Labs/4/src/submit/SymtabVisitor.java:import coursesolutions.courseparser.CourseScanner;
+./Studios/5/.classpath:	<classpathentry kind="lib" path="Tools/coursesolutions.jar"/>
+Binary file ./Studios/5/Tools/coursesolutions.jar matches
+Binary file ./Studios/5/bin/studio8/Main.class matches
+./Studios/5/src/studio8/Main.java:		return new coursesolutions.CourseBuildSymtab(200000, 511);
